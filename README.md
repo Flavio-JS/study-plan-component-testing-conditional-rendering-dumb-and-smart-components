@@ -91,11 +91,48 @@ Crie um arquivo `.babelrc` e adicione o seguinte conteúdo:
 
 Suponha que temos um componente chamado `ExemploComponente` que renderiza um parágrafo apenas se a propriedade `mostrar` for verdadeira. Caso contrário, não renderiza nada.
 
-// aqui é uma imágem do ExemploComponente.js
+```javascript
+import React from "react";
+
+interface IExemploComponenteProps {
+  mostrar: boolean;
+}
+
+const ExemploComponente = ({ mostrar }: IExemploComponenteProps) => {
+  return (
+    <div>{mostrar && <p>Condição atendida, exibindo o parágrafo!</p>}</div>
+  );
+};
+
+export { ExemploComponente };
+```
 
 Para testar essa condição de renderização usando a biblioteca React Testing Library, podemos escrever o seguinte teste:
 
-// aqui é uma imágem do ExemploComponente.spec.tsx
+```javascript
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import { ExemploComponente } from "./ExemploComponente";
+import "@testing-library/jest-dom";
+
+describe("ExemploComponente", () => {
+  it("deve renderizar corretamente quando a prop 'mostrar' for verdadeira", () => {
+    render(<ExemploComponente mostrar={true} />);
+
+    expect(
+      screen.queryByText("Condição atendida, exibindo o parágrafo!")
+    ).toBeInTheDocument();
+  });
+
+  it("não deve renderizar o parágrafo quando a prop 'mostrar' for falsa", () => {
+    render(<ExemploComponente mostrar={false} />);
+
+    expect(
+      screen.queryByText("Condição atendida, exibindo o parágrafo!")
+    ).toBeNull();
+  });
+});
+```
 
 Neste exemplo, estamos utilizando a função `render` da biblioteca React Testing Library para renderizar o componente `ExemploComponente` com diferentes valores para a propriedade `mostrar`. Em seguida, utilizamos o método `queryByText` para obter referências aos elementos presentes na tela.
 
