@@ -50,26 +50,57 @@ Esses são apenas exemplos básicos para ilustrar a separação entre os compone
 
 A implementação exata depende do contexto do seu projeto, mas a ideia geral é identificar quais componentes são responsáveis apenas pela exibição e quais precisam gerenciar o estado e a lógica, separando-os adequadamente para obter um código mais organizado e fácil de dar manutenção.
 
-## Separação da Regra de Negócio
-
-- Aprofunde seu conhecimento sobre os princípios de separação de responsabilidades na arquitetura de software.
-- Pesquise padrões de projeto como MVC (Model-View-Controller) e MVVM (Model-View-ViewModel) que ajudam na separação da regra de negócio.
-- Explore técnicas para extrair a lógica de negócio de um componente e encapsulá-la em módulos independentes.
-
-## Teste de Regras de Negócio
-
-- Estude diferentes tipos de testes, como testes unitários e testes de integração.
-- Aprenda a escrever testes para validar regras de negócio isoladamente, sem depender dos componentes externos.
-- Explore ferramentas e frameworks de teste adequados à sua tecnologia de desenvolvimento.
-
 ## Testando Condições de Renderização
 
-- Pesquise sobre técnicas de testes de renderização em componentes.
-- Estude como simular diferentes condições de renderização, como dados de entrada específicos, valores booleanos e estados diferentes.
-- Explore bibliotecas e frameworks que facilitem o teste de renderização, como Jest, React Testing Library, Enzyme, etc.
+### Pesquise sobre técnicas de testes de renderização em componentes.
+
+**React Testing Library:**
+A biblioteca React Testing Library é amplamente utilizada para testar a renderização de componentes em Next.js. Ela fornece uma série de utilitários e métodos para selecionar elementos da interface, interagir com eles e realizar asserções sobre o que é exibido na tela.
+
+### Explore bibliotecas e frameworks que facilitem o teste de renderização, como Jest, React Testing Library, Enzyme, etc.
+
+#### Instalação das dependências
+
+Certifique-se de ter o Jest, o React Testing Library e as dependências relacionadas instaladas no seu projeto. Você pode instalá-las executando o seguinte comando no terminal, dentro do diretório do seu projeto:
+
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom @babel/preset-react ts-jest babel-jest @babel/preset-typescript @babel/preset-env
+
+Crie um arquivo `jest.config.js` e adicione o seguinte conteúdo:
+
+```javascript
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  transform: {
+    "^.+\\.(ts|tsx)?$": "babel-jest"
+  }
+};
+
+Crie um arquivo `.babelrc` e adicione o seguinte conteúdo:
+
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"]
+}
+
+#### Exemplo
+
+Suponha que temos um componente chamado `ExemploComponente` que renderiza um parágrafo apenas se a propriedade `mostrar` for verdadeira. Caso contrário, não renderiza nada.
+
+// aqui é uma imágem do ExemploComponente.js
+
+Para testar essa condição de renderização usando a biblioteca React Testing Library, podemos escrever o seguinte teste:
+
+// aqui é uma imágem do ExemploComponente.spec.tsx
+
+Neste exemplo, estamos utilizando a função `render` da biblioteca React Testing Library para renderizar o componente `ExemploComponente` com diferentes valores para a propriedade `mostrar`. Em seguida, utilizamos o método `queryByText` para obter referências aos elementos presentes na tela.
+
+Em seguida, realizamos asserções (testes) para verificar se o parágrafo é renderizado corretamente quando a condição é verdadeira e se não é renderizado quando a condição é falsa.
+
+Essa abordagem nos permite testar a lógica de renderização do componente e garantir
 
 ## Exemplos Práticos
 
 - Procure por tutoriais e exemplos de código que demonstrem a separação de regras de negócio e os testes de condições de renderização.
 - Experimente aplicar esses conceitos em um projeto de estudo ou em um componente real do seu trabalho.
 - Discuta suas descobertas e desafios com seus colegas e seu tech lead para obter feedback e orientações adicionais.
+```
