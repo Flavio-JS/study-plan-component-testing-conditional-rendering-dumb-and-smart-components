@@ -1,8 +1,8 @@
-# Plano de Estudo: Componentes Burros e Inteligentes
+# Plano de Estudo: Componentes Burros e Inteligentes & Teste de Componentes e Condições de Renderização
 
 ## Conceito de "Componente Burro" e "Componente Inteligente"
 
-- Pesquise sobre os conceitos de "Componente Burro" e "Componente Inteligente" na arquitetura de software.
+### Pesquise sobre os conceitos de "Componente Burro" e "Componente Inteligente" na arquitetura de software.
 
 Os conceitos de "Componente Burro" e "Componente Inteligente" referem-se a abordagens diferentes na organização e separação de responsabilidades dos componentes.
 
@@ -14,7 +14,7 @@ Essa separação entre componentes burros e inteligentes segue o princípio da s
 
 Ao projetar seus componentes em Next.js, é importante identificar quais componentes são apenas responsáveis pela exibição e quais precisam gerenciar o estado e a lógica. Essa separação ajuda a criar uma estrutura organizada, facilitando a manutenção e extensão do código.
 
-- Compreenda a diferença entre eles, focando na separação da lógica de negócio dos componentes.
+### Compreenda a diferença entre eles, focando na separação da lógica de negócio dos componentes.
 
 A diferença entre um "Componente Burro" e um "Componente Inteligente" está na separação da lógica de negócio dos componentes.
 
@@ -139,9 +139,3 @@ Neste exemplo, estamos utilizando a função `render` da biblioteca React Testin
 Em seguida, realizamos asserções (testes) para verificar se o parágrafo é renderizado corretamente quando a condição é verdadeira e se não é renderizado quando a condição é falsa.
 
 Essa abordagem nos permite testar a lógica de renderização do componente e garantir
-
-## Exemplos Práticos
-
-- Procure por tutoriais e exemplos de código que demonstrem a separação de regras de negócio e os testes de condições de renderização.
-- Experimente aplicar esses conceitos em um projeto de estudo ou em um componente real do seu trabalho.
-- Discuta suas descobertas e desafios com seus colegas e seu tech lead para obter feedback e orientações adicionais.
