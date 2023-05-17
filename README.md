@@ -69,18 +69,21 @@ Crie um arquivo `jest.config.js` e adicione o seguinte conteúdo:
 
 ```javascript
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
+  preset: "ts-jest",
+  testEnvironment: "jsdom",
   transform: {
-    "^.+\\.(ts|tsx)?$": "babel-jest"
-  }
+    "^.+\\.(ts|tsx)?$": "babel-jest",
+  },
 };
+```
 
 Crie um arquivo `.babelrc` e adicione o seguinte conteúdo:
 
+```javascript
 {
   "presets": ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"]
 }
+```
 
 #### Exemplo
 
@@ -103,4 +106,7 @@ Essa abordagem nos permite testar a lógica de renderização do componente e ga
 - Procure por tutoriais e exemplos de código que demonstrem a separação de regras de negócio e os testes de condições de renderização.
 - Experimente aplicar esses conceitos em um projeto de estudo ou em um componente real do seu trabalho.
 - Discuta suas descobertas e desafios com seus colegas e seu tech lead para obter feedback e orientações adicionais.
+
+```
+
 ```
