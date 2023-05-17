@@ -63,7 +63,9 @@ A biblioteca React Testing Library é amplamente utilizada para testar a renderi
 
 Certifique-se de ter o Jest, o React Testing Library e as dependências relacionadas instaladas no seu projeto. Você pode instalá-las executando o seguinte comando no terminal, dentro do diretório do seu projeto:
 
+```javascript
 npm install --save-dev jest @testing-library/react @testing-library/jest-dom @babel/preset-react ts-jest babel-jest @babel/preset-typescript @babel/preset-env
+```
 
 Crie um arquivo `jest.config.js` e adicione o seguinte conteúdo:
 
@@ -106,7 +108,3 @@ Essa abordagem nos permite testar a lógica de renderização do componente e ga
 - Procure por tutoriais e exemplos de código que demonstrem a separação de regras de negócio e os testes de condições de renderização.
 - Experimente aplicar esses conceitos em um projeto de estudo ou em um componente real do seu trabalho.
 - Discuta suas descobertas e desafios com seus colegas e seu tech lead para obter feedback e orientações adicionais.
-
-```
-
-```
