@@ -4,13 +4,13 @@
 
 - Pesquise sobre os conceitos de "Componente Burro" e "Componente Inteligente" na arquitetura de software.
 
-Os conceitos de "Componente Burro" e "Componente Inteligente" que se referem a abordagens diferentes na organização e separação de responsabilidades dos componentes.
+Os conceitos de "Componente Burro" e "Componente Inteligente" referem-se a abordagens diferentes na organização e separação de responsabilidades dos componentes.
 
 Um "Componente Burro" é responsável apenas pela exibição de informações ou interação com o usuário. Ele não possui lógica de negócio complexa e não mantém seu próprio estado. Em vez disso, recebe dados e funcionalidades por meio de props e os renderiza. Um exemplo é um componente de exibição de lista que recebe um array de itens e os renderiza na interface.
 
 Por outro lado, um "Componente Inteligente" é responsável pelo gerenciamento da lógica de negócio e estado do componente. Ele pode conter ações, manipulação de eventos, chamadas de API e lógica complexa. Ao contrário do componente burro, o componente inteligente possui seu próprio estado interno e pode modificá-lo conforme necessário. Ele também pode passar dados e funcionalidades para outros componentes burros por meio de props.
 
-Essa separação entre componentes burros e inteligentes segue o princípio da separação de responsabilidades, o que torna o código mais modular, reutilizável e facilita os testes, uma vez que a lógica de negócio está isolada em componentes específicos.
+Essa separação entre componentes burros e inteligentes segue o princípio da separação de responsabilidades, tornando o código mais modular, reutilizável e facilitando os testes, uma vez que a lógica de negócio está isolada em componentes específicos.
 
 Ao projetar seus componentes em Next.js, é importante identificar quais componentes são apenas responsáveis pela exibição e quais precisam gerenciar o estado e a lógica. Essa separação ajuda a criar uma estrutura organizada, facilitando a manutenção e extensão do código.
 
