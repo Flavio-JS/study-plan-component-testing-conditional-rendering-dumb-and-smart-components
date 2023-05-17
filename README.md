@@ -24,9 +24,9 @@ Por outro lado, um "Componente Inteligente" é responsável por gerenciar a lóg
 
 Essa separação é benéfica porque mantém a lógica de negócio isolada em componentes específicos, tornando o código mais modular, reutilizável e facilitando os testes. Os componentes burros focam na exibição e interação, enquanto os componentes inteligentes lidam com a lógica e o estado do componente.
 
-# Exemplos Práticos de Separação entre "Componente Burro" e "Componente Inteligente"
+## Exemplos Práticos de Separação entre "Componente Burro" e "Componente Inteligente"
 
-## Exemplo 1: Lista de Itens
+### Exemplo 1: Lista de Itens
 
 **Componente Burro (Dumb Component):**
 
@@ -36,7 +36,7 @@ Essa separação é benéfica porque mantém a lógica de negócio isolada em co
 
 `Lista.js`: Responsável por gerenciar a lógica da lista de itens. Faz a chamada à API para obter os dados dos itens e passa-os para o componente `Item.js` por meio de props.
 
-## Exemplo 2: Formulário de Contato
+### Exemplo 2: Formulário de Contato
 
 **Componente Burro (Dumb Component):**
 
